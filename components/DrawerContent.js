@@ -44,37 +44,6 @@ export function DrawerContent(props) {
                 />
               </List.Accordion>
 
-
-              <List.Accordion
-                title="Lungs"
-                left={props => <List.Icon {...props} icon="lungs" theme={theme} />}>
-                <DrawerItem 
-                  label="Exercise 1"
-                  onPress={() => { /*props.navigation.navigate('')*/ }}
-                  inactiveTintColor='white'
-                />
-                <DrawerItem 
-                  label="Exercise 2"
-                  onPress={() => { /*props.navigation.navigate('LungHub')*/ }}
-                  inactiveTintColor='white'
-                />
-              </List.Accordion>
-
-              <List.Accordion
-                title="Sleep"
-                left={props => <List.Icon {...props} icon="sleep" theme={theme} />}>
-                <DrawerItem 
-                  label="Exercise 1"
-                  onPress={() => { /*props.navigation.navigate('')*/ }}
-                  inactiveTintColor='white'
-                />
-                <DrawerItem 
-                  label="Exercise 2"
-                  onPress={() => { /*props.navigation.navigate('LungHub')*/ }}
-                  inactiveTintColor='white'
-                />
-              </List.Accordion>
-
               <List.Accordion
                 title="Sports Performance"
                 left={props => <List.Icon {...props} icon="soccer" theme={theme} />}>
