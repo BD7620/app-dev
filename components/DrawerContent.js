@@ -33,13 +33,13 @@ export function DrawerContent(props) {
                 title="Stress/Anxiety"
                 left={props => <List.Icon {...props} icon="head-snowflake" theme={theme} />}>
                 <DrawerItem 
-                  label="Exercise 1"
-                  onPress={() => { /*props.navigation.navigate('')*/ }}
+                  label="Abdomen Breathing"
+                  onPress={() => { props.navigation.navigate('Anxiety1') }}
                   inactiveTintColor='white'
                 />
                 <DrawerItem 
-                  label="Exercise 2"
-                  onPress={() => { /*props.navigation.navigate('LungHub')*/ }}
+                  label="Equal Breathing"
+                  onPress={() => { props.navigation.navigate('Anxiety2') }}
                   inactiveTintColor='white'
                 />
               </List.Accordion>
@@ -48,45 +48,13 @@ export function DrawerContent(props) {
                 title="Sports Performance"
                 left={props => <List.Icon {...props} icon="soccer" theme={theme} />}>
                 <DrawerItem 
-                  label="Exercise 1"
-                  onPress={() => { /*props.navigation.navigate('')*/ }}
+                  label="Diaphragmatic Breathing"
+                  onPress={() => { props.navigation.navigate('Sport1') }}
                   inactiveTintColor='white'
                 />
                 <DrawerItem 
-                  label="Exercise 2"
-                  onPress={() => { /*props.navigation.navigate('LungHub')*/ }}
-                  inactiveTintColor='white'
-                />
-              </List.Accordion>
-
-              <List.Accordion
-                title="Singing"
-                left={props => <List.Icon {...props} icon="music" theme={theme} />}>
-                <DrawerItem 
-                  label="Exercise 1"
-                  onPress={() => { /*props.navigation.navigate('')*/ }}
-                  inactiveTintColor='white'
-                />
-                <DrawerItem 
-                  label="Exercise 2"
-                  onPress={() => { /*props.navigation.navigate('LungHub')*/ }}
-                  inactiveTintColor='white'
-                />
-              </List.Accordion>
-            </List.Section>
-
-            <List.Section title="Info">
-              <List.Accordion
-                title="Food/Drink"
-                left={props => <List.Icon {...props} icon="food" theme={theme} />}>
-                <DrawerItem 
-                  label="Exercise 1"
-                  onPress={() => { /*props.navigation.navigate('')*/ }}
-                  inactiveTintColor='white'
-                />
-                <DrawerItem 
-                  label="Exercise 2"
-                  onPress={() => { /*props.navigation.navigate('LungHub')*/ }}
+                  label="Long Exhale Breathing"
+                  onPress={() => { props.navigation.navigate('Sport2') }}
                   inactiveTintColor='white'
                 />
               </List.Accordion>
@@ -95,18 +63,31 @@ export function DrawerContent(props) {
                 title="Sleep"
                 left={props => <List.Icon {...props} icon="sleep" theme={theme} />}>
                 <DrawerItem 
-                  label="Exercise 1"
-                  onPress={() => { /*props.navigation.navigate('')*/ }}
+                  label="4-7-8 Breathing"
+                  onPress={() => { props.navigation.navigate('Sleep1') }}
                   inactiveTintColor='white'
                 />
                 <DrawerItem 
-                  label="Exercise 2"
-                  onPress={() => { /*props.navigation.navigate('LungHub')*/ }}
+                  label="Box Breathing"
+                  onPress={() => { props.navigation.navigate('Sleep2') }}
                   inactiveTintColor='white'
                 />
               </List.Accordion>
+            </List.Section>
 
-              
+            <List.Section title="Info">
+               <Drawer.Item
+                style={{}}
+                icon="food"
+                label="Food/Drink"
+                /*onPress={() => { props.navigation.navigate('Sleep2') }}*/
+                />
+              <Drawer.Item
+                style={{}}
+                icon="sleep"
+                label="Sleep"
+                /*onPress={() => { props.navigation.navigate('Sleep2') }}*/
+                />
             </List.Section>
           </PaperProvider>
         </View>
