@@ -24,9 +24,10 @@ let width = Dimensions.get('window').width;
 export function DrawerContent(props) {
   return (
     <View style={{ flex: 1 }}>
+      <PaperProvider theme={theme}>
       <DrawerContentScrollView {...props}>
         <View style={styles.drawerContent}>
-          <PaperProvider theme={theme}>
+          
             <List.Section title="Breathing">
               
               <List.Accordion
@@ -80,19 +81,26 @@ export function DrawerContent(props) {
                 style={{}}
                 icon="food"
                 label="Food/Drink"
-                /*onPress={() => { props.navigation.navigate('Sleep2') }}*/
+                onPress={() => { props.navigation.navigate('FoodInfo') }}
                 />
               <Drawer.Item
                 style={{}}
                 icon="sleep"
                 label="Sleep"
-                /*onPress={() => { props.navigation.navigate('Sleep2') }}*/
+                onPress={() => { props.navigation.navigate('SleepInfo') }}
                 />
             </List.Section>
-          </PaperProvider>
         </View>
       </DrawerContentScrollView>
-
+        <Drawer.Section style={styles.bottomDrawerSection}>
+         <Drawer.Item
+                
+                icon="compare"
+                label="Theme"
+                onPress={() => { props.navigation.navigate('setThemePage') }}
+                />
+        </Drawer.Section>
+        </PaperProvider>
     </View>
   );
 }
@@ -117,7 +125,8 @@ const styles = StyleSheet.create({
   },
   drawerSection: {
     marginTop: 15,
-    /*borderBottomColor:'#C2B8DB',
-    borderBottomWidth: 1,*/
   },
+  bottomDrawerSection: {
+    marginBottom: 15,
+},
 })
